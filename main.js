@@ -4,12 +4,12 @@ function reconstruct(words,string){
     * @param string: desired sentence without spaces
     * **/
     let wordBuild = ""
-    let final_sentence = [];
+    let finalSentence = [];
     for(let i = 0 ; i < string.length ; i++){
         wordBuild+= string[i]
         if(words.includes(wordBuild)){
             words.splice(words.indexOf(wordBuild),1)
-            final_sentence.push(wordBuild)
+            finalSentence.push(wordBuild)
             wordBuild = ""
         }
     }
@@ -17,7 +17,7 @@ function reconstruct(words,string){
     if(wordBuild !== "")
         return []
 
-    return final_sentence;
+    return finalSentence;
 }
 
 const compareArrays = (x,y) =>{
